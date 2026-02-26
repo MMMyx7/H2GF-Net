@@ -1,1 +1,41 @@
-
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.demo-table th, .demo-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: top;
+}
+.demo-table thead th {
+  background: #fafafa;
+  text-align: center;
+  font-weight: 700;
+}
+.case-cell {
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.demo-text {
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.demo-media img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.small-img {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+.ours {
+  color: #b30000;
+}
