@@ -210,93 +210,91 @@ hr{
 
   <hr>
 
-  <!-- Demo Examples -->
+  <!-- Demo Examples Section -->
   <div class="section-title">Demo Examples</div>
 
-  <div class="col-headers">
-    <div></div>
-    <div class="col-h">Multimodal Input</div>
-    <div class="col-h">Multimodal Affective Description in Stage1</div>
-    <div class="col-h">Variables in Stage2</div>
-    <div class="col-h">Final Prediction</div>
-  </div>
+  <table class="demo-table">
+    <thead>
+      <tr>
+        <th style="width:8%;">Case</th>
+        <th style="width:22%;">Multimodal Input</th>
+        <th style="width:38%;">Multimodal Affective Description (Stage1)</th>
+        <th style="width:16%;">Variables (Stage2)</th>
+        <th style="width:16%;">Final Prediction</th>
+      </tr>
+    </thead>
 
-  <!-- Case 1 -->
-  <div class="case-row">
-    <div class="case-label">Case 1</div>
+    <tbody>
 
-    <div class="card">
-      <div class="media">
-        <img src="Supplementary/case1_video.png">
-      </div>
-      <div class="quote">
-        “Okay, anyway, I need to get a head count so I know who’s coming.”
-      </div>
-      <div class="wave">
-        <img src="Supplementary/case1_wave.png">
-      </div>
-    </div>
+      <!-- Case 1 -->
+      <tr>
+        <td class="case-cell">Case 1</td>
 
-    <div class="card stage1">
-Bot's message: Based on the video provided...
-(你完整粘贴 Stage1 文本在这里)
-    </div>
+        <td>
+          <img src="Supplementary/case1_video.png" width="100%"><br><br>
+          <b>Text:</b><br>
+          “Okay, anyway, I need to get a head count so I know who’s coming.”<br><br>
+          <img src="Supplementary/case1_wave.png" width="100%">
+        </td>
 
-    <div class="card vars">
-      Top-M Patches of Text (M=5%)<br><br>
-      <div>Head Count</div><br>
-      Top-K Patches of Keyframe (K=10%)<br>
-      <img src="Supplementary/case1_keyframe.png">
-    </div>
+        <td>
+          Bot's message: Based on the video provided...
+          (把你完整 Stage1 文本粘贴这里)
+        </td>
 
-    <div class="card pred">
-      Ground Truth: Inform<br><br>
-      <span class="ours">H²GF-Net: Inform</span><br><br>
-      MAG-BERT: Ask for help<br>
-      MuLT: Taunt<br>
-      MISA: Ask for help<br>
-      TCL-MAP: Ask for help
-    </div>
-  </div>
+        <td>
+          <b>Top-M Text (5%)</b><br>
+          Head Count<br><br>
+          <b>Top-K Keyframe (10%)</b><br>
+          <img src="Supplementary/case1_keyframe.png" width="100%">
+        </td>
 
-  <div class="dash"></div>
+        <td>
+          <b>Ground Truth:</b> Inform<br><br>
+          <span class="ours"><b>H²GF-Net:</b> Inform</span><br><br>
+          MAG-BERT: Ask for help<br>
+          MuLT: Taunt<br>
+          MISA: Ask for help<br>
+          TCL-MAP: Ask for help
+        </td>
+      </tr>
 
-  <!-- Case 2 -->
-  <div class="case-row">
-    <div class="case-label">Case 2</div>
+      <!-- Case 2 -->
+      <tr>
+        <td class="case-cell">Case 2</td>
 
-    <div class="card">
-      <div class="media">
-        <img src="Supplementary/case2_video.png">
-      </div>
-      <div class="quote">
-        “Yeah, but I don’t think anyone should have that much power.”
-      </div>
-      <div class="wave">
-        <img src="Supplementary/case2_wave.png">
-      </div>
-    </div>
+        <td>
+          <img src="Supplementary/case2_video.png" width="100%"><br><br>
+          <b>Text:</b><br>
+          “Yeah, but I don’t think anyone should have that much power.”<br><br>
+          <img src="Supplementary/case2_wave.png" width="100%">
+        </td>
 
-    <div class="card stage1">
-(粘贴 Case2 的 Stage1 描述)
-    </div>
+        <td>
+          (粘贴 Case2 的 Stage1 描述)
+        </td>
 
-    <div class="card vars">
-      Top-M Patches of Text (M=5%)<br><br>
-      <div>Anyone Power</div><br>
-      Top-K Patches of Keyframe (K=10%)<br>
-      <img src="Supplementary/case2_keyframe.png">
-    </div>
+        <td>
+          <b>Top-M Text (5%)</b><br>
+          Anyone Power<br><br>
+          <b>Top-K Keyframe (10%)</b><br>
+          <img src="Supplementary/case2_keyframe.png" width="100%">
+        </td>
 
-    <div class="card pred">
-      Ground Truth: Oppose<br><br>
-      <span class="ours">H²GF-Net: Oppose</span><br><br>
-      MAG-BERT: Complain<br>
-      MuLT: Criticize<br>
-      MISA: Complain<br>
-      TCL-MAP: Criticize
-    </div>
-  </div>
+        <td>
+          <b>Ground Truth:</b> Oppose<br><br>
+          <span class="ours"><b>H²GF-Net:</b> Oppose</span><br><br>
+          MAG-BERT: Complain<br>
+          MuLT: Criticize<br>
+          MISA: Complain<br>
+          TCL-MAP: Criticize
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+ 
 
 </div>
 </body>
