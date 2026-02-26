@@ -2,40 +2,84 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
+
 .demo-table th, .demo-table td {
-  border: 1px solid #ddd;
   padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd; /* 添加边框 */
   vertical-align: top;
 }
-.demo-table thead th {
-  background: #fafafa;
-  text-align: center;
-  font-weight: 700;
+
+.demo-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #000; /* 添加底部边框 */
 }
+
+.demo-table td {
+  background-color: #fff;
+  color: #555;
+}
+
+.demo-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* 为偶数行添加不同背景色 */
+}
+
+.demo-table tr:hover {
+  background-color: #f1f1f1; /* 鼠标悬停时变色 */
+}
+
 .case-cell {
+  font-weight: bold;
+  background-color: #e8e8e8;
   text-align: center;
-  font-weight: 700;
-  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 10px 0;
 }
-.demo-text {
-  line-height: 1.5;
-  white-space: pre-wrap;
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-.demo-media img {
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
 }
-.small-img {
+
+.card .quote {
   margin-top: 10px;
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  display: block;
+  font-style: italic;
 }
+
 .ours {
-  color: #b30000;
+  color: #b00000;
+  font-weight: bold;
+}
+
+.dash {
+  margin: 30px 0;
+  border-top: 2px dashed #ccc;
+}
+
+@media(max-width: 768px) {
+  .demo-table th, .demo-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .case-cell {
+    font-size: 16px;
+  }
+
+  .demo-table th {
+    font-size: 14px;
+  }
 }
