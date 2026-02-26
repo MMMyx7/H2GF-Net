@@ -181,12 +181,23 @@ hr{
   <!-- Abstract -->
   <div class="section-title">Abstract</div>
   <div class="abstract">
-    Multimodal Intent Recognition (MIR) aims to infer a speaker’s communicative intent
-    by integrating heterogeneous textual, acoustic, and visual signals.
-    However, intent-related cues are distributed across fine-grained local variations
-    and global semantic representations. We propose H²GF-Net, which integrates
-    affective semantic prior-guided local key information selection with progressive
-    hybrid-scale heterogeneous graph modeling for robust multimodal intent understanding.
+    Multimodal Intent Recognition (MIR) aims to infer a speaker’s communicative intent by integrating heterogeneous 
+    textual, acoustic, and visual signals. However, intent-related cues are often distributed across fine-grained 
+    local variations and global semantic representations, making it challenging for existing approaches to explicitly 
+    model cross-modal and local-global dependencies within a unified framework. To address this challenge, we propose 
+    the Hybrid-scale Heterogeneous Graph Fusion Network (H$^2$GF-Net), which integrates affective semantic prior–guided 
+    local key information selection with progressive hybrid-scale heterogeneous graph modeling for multimodal intent understanding.
+    Specifically, the model first performs global-scale multimodal affective semantic understanding by generating high-level 
+    affective-intent semantic descriptions, which serve as semantic priors beyond conventional emotion features. Guided by these 
+    priors, H$^2$GF-Net explicitly selects intent-relevant local units across textual, acoustic, and visual modalities, enabling 
+    precise localization of critical multimodal cues. Furthermore, a progressive hybrid-scale heterogeneous graph is constructed 
+    to capture dependencies between local and global representations as well as cross-modal interactions, and these graph representations 
+    are integrated through structure-aware graph fusion to support intent prediction. Experimental results demonstrate that the proposed 
+    method consistently outperforms state-of-the-art approaches on a benchmark dataset, while additional generalization evaluations 
+    further verify its robustness under extended evaluation settings.
+
+
+    
   </div>
 
   <hr>
@@ -194,7 +205,7 @@ hr{
   <!-- Model Architecture -->
   <div class="section-title">Model Architecture</div>
   <div class="model-img">
-    <img src="Supplementary/model.png" alt="Model Architecture">
+    <img src="./Supplementary/model.png" alt="Model Architecture">
   </div>
 
   <hr>
