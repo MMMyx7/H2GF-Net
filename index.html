@@ -1,186 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H²GF-Net</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H²GF-Net</title>
 
-<style>
-:root{
-  --border: 3px;
-  --radius: 14px;
-  --accent: #b00000;
-}
+  <!-- CSS Styles -->
+  <style>
+    :root {
+      --border: 3px;
+      --radius: 14px;
+      --accent: #b00000;
+    }
 
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background:#fff;
-  color:#111;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: #fff;
+      color: #111;
+    }
 
-.page{
-  max-width:1200px;
-  margin:40px auto 80px;
-  padding:0 20px;
-}
+    .page {
+      max-width: 1200px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
 
-/* ===== Title ===== */
-.title{
-  text-align:center;
-  font-size:46px;
-  font-weight:900;
-}
+    /* ===== Title ===== */
+    .title {
+      text-align: center;
+      font-size: 46px;
+      font-weight: 900;
+    }
 
-.subtitle{
-  text-align:center;
-  font-size:18px;
-  margin-top:6px;
-  color:#555;
-  margin-bottom:40px;
-}
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 6px;
+      color: #555;
+      margin-bottom: 40px;
+    }
 
-/* ===== Section Title ===== */
-.section-title{
-  text-align:center;
-  font-size:32px;
-  font-weight:900;
-  margin:40px 0 20px;
-}
+    /* ===== Section Title ===== */
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 900;
+      margin: 40px 0 20px;
+    }
 
-.abstract{
-  max-width:950px;
-  margin:0 auto;
-  line-height:1.7;
-  font-size:16px;
-  text-align:justify;
-}
+    .abstract {
+      max-width: 950px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 16px;
+      text-align: justify;
+    }
 
-.model-img{
-  margin:30px auto 0;
-  max-width:1000px;
-}
+    .model-img {
+      margin: 30px auto 0;
+      max-width: 1000px;
+    }
 
-.model-img img{
-  width:100%;
-  border:1px solid #ddd;
-  border-radius:12px;
-}
+    .model-img img {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
 
-hr{
-  margin:60px 0;
-  border:none;
-  border-top:1px solid #ddd;
-}
+    hr {
+      margin: 60px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
 
-/* ===== Demo Grid ===== */
+    /* ===== Demo Grid ===== */
+    .col-headers {
+      display: grid;
+      grid-template-columns: 60px 1fr 1.6fr 1fr 1.1fr;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
 
-.col-headers{
-  display:grid;
-  grid-template-columns:60px 1fr 1.6fr 1fr 1.1fr;
-  gap:20px;
-  margin-bottom:10px;
-}
+    .col-h {
+      text-align: center;
+      font-weight: 900;
+      font-size: 18px;
+    }
 
-.col-h{
-  text-align:center;
-  font-weight:900;
-  font-size:18px;
-}
+    .case-row {
+      display: grid;
+      grid-template-columns: 60px 1fr 1.6fr 1fr 1.1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
 
-.case-row{
-  display:grid;
-  grid-template-columns:60px 1fr 1.6fr 1fr 1.1fr;
-  gap:20px;
-  margin-bottom:30px;
-}
+    .case-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      border: var(--border) solid #000;
+      border-radius: var(--radius);
+      font-weight: 900;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-.case-label{
-  writing-mode:vertical-rl;
-  transform:rotate(180deg);
-  border:var(--border) solid #000;
-  border-radius:var(--radius);
-  font-weight:900;
-  text-align:center;
-  padding:10px 0;
-}
+    .card {
+      border: var(--border) solid #000;
+      border-radius: var(--radius);
+      padding: 14px;
+    }
 
-.card{
-  border:var(--border) solid #000;
-  border-radius:var(--radius);
-  padding:14px;
-}
+    .stage1 {
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
 
-.stage1{
-  font-size:14px;
-  line-height:1.4;
-  white-space:pre-wrap;
-}
+    .vars {
+      text-align: center;
+      font-weight: 900;
+    }
 
-.vars{
-  text-align:center;
-  font-weight:900;
-}
+    .vars img {
+      width: 85%;
+      margin-top: 10px;
+      border: 2px solid #000;
+      border-radius: 10px;
+    }
 
-.vars img{
-  width:85%;
-  margin-top:10px;
-  border:2px solid #000;
-  border-radius:10px;
-}
+    .pred {
+      font-weight: 900;
+    }
 
-.pred{
-  font-weight:900;
-}
+    .pred .ours {
+      color: var(--accent);
+    }
 
-.pred .ours{
-  color:var(--accent);
-}
+    .dash {
+      border-top: 2px dashed #666;
+      margin: 20px 0;
+    }
 
-.dash{
-  border-top:2px dashed #666;
-  margin:20px 0;
-}
+    .media img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.media img{
-  width:100%;
-  border-radius:10px;
-}
+    .quote {
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 800;
+      margin: 12px 0;
+      text-align: center;
+    }
 
-.quote{
-  border:2px solid #000;
-  border-radius:10px;
-  padding:10px;
-  font-weight:800;
-  margin:12px 0;
-  text-align:center;
-}
+    .wave img {
+      width: 100%;
+    }
 
-.wave img{
-  width:100%;
-}
-
-@media(max-width:1000px){
-  .case-row, .col-headers{
-    grid-template-columns:1fr;
-  }
-  .case-label{
-    writing-mode:horizontal-tb;
-    transform:none;
-  }
-}
-</style>
+    @media (max-width: 1000px) {
+      .case-row, .col-headers {
+        grid-template-columns: 1fr;
+      }
+      .case-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="page">
+  <div class="page">
+    <div class="title">H²GF-Net</div>
+    <div class="subtitle">Hybrid-scale Heterogeneous Graph Fusion for Multimodal Intent Recognition</div>
 
-  <div class="title">H²GF-Net</div>
-  <div class="subtitle">Hybrid-scale Heterogeneous Graph Fusion for Multimodal Intent Recognition</div>
-
-  <!-- Abstract -->
-  <div class="section-title">Abstract</div>
-  <div class="abstract">
+    <!-- Abstract -->
+    <div class="section-title">Abstract</div>
+    <div class="abstract">
     Multimodal Intent Recognition (MIR) aims to infer a speaker’s communicative intent by integrating heterogeneous 
     textual, acoustic, and visual signals. However, intent-related cues are often distributed across fine-grained 
     local variations and global semantic representations, making it challenging for existing approaches to explicitly 
@@ -196,19 +195,17 @@ hr{
     method consistently outperforms state-of-the-art approaches on a benchmark dataset, while additional generalization evaluations 
     further verify its robustness under extended evaluation settings.
 
+    </div>
 
-    
-  </div>
+    <hr>
 
-  <hr>
+    <!-- Model Architecture -->
+    <div class="section-title">Model Architecture</div>
+    <div class="model-img">
+      <img src="./Supplementary/model.png" alt="Model Architecture">
+    </div>
 
-  <!-- Model Architecture -->
-  <div class="section-title">Model Architecture</div>
-  <div class="model-img">
-    <img src="./Supplementary/model.png" alt="Model Architecture">
-  </div>
-
-  <hr>
+    <hr>
 
     <!-- Demo Examples -->
     <div class="section-title">Demo Examples</div>
@@ -225,16 +222,34 @@ hr{
       <div class="case-label">Case 1</div>
 
       <div class="card">
-        <div class="media">
-          <img src="Supplementary/case1_video.png" width="100%">
-        </div>
-        <div class="quote">
-          “Okay, anyway, I need to get a head count so I know who’s coming.”
-        </div>
-        <div class="wave">
-          <img src="Supplementary/case1_wave.png" width="100%">
-        </div>
-      </div>
+  
+  <!-- Video -->
+  <div class="mm-block">
+    <div class="mm-label">Video</div>
+    <video controls class="mm-video">
+      <source src="Supplementary/case1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text -->
+  <div class="mm-block">
+    <div class="mm-label">Text</div>
+    <div class="mm-quote">
+      “Okay, anyway, I need to get a head count so I know who’s coming.”
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <div class="mm-block">
+    <div class="mm-label">Audio</div>
+    <audio controls class="mm-audio">
+      <source src="Supplementary/case1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+</div>
 
       <div class="card stage1">
         Bot's message: Based on the video provided...
@@ -249,8 +264,8 @@ hr{
       </div>
 
       <div class="card pred">
-        Ground Truth: Inform<br><br>
-        <span class="ours">H²GF-Net: Inform</span><br><br>
+        Ground Truth: Inform<br>
+        <span class="ours">H²GF-Net: Inform</span><br>
         MAG-BERT: Ask for help<br>
         MuLT: Taunt<br>
         MISA: Ask for help<br>
@@ -265,17 +280,36 @@ hr{
       <div class="case-label">Case 2</div>
 
       <div class="card">
-        <div class="media">
-          <img src="Supplementary/case2_video.png" width="100%">
-        </div>
-        <div class="quote">
-          “Yeah, but I don’t think anyone should have that much power.”
-        </div>
-        <div class="wave">
-          <img src="Supplementary/case2_wave.png" width="100%">
-        </div>
-      </div>
+  
+  <!-- Video -->
+  <div class="mm-block">
+    <div class="mm-label">Video</div>
+    <video controls class="mm-video">
+      <source src="Supplementary/case1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
+  <!-- Text -->
+  <div class="mm-block">
+    <div class="mm-label">Text</div>
+    <div class="mm-quote">
+      “Okay, anyway, I need to get a head count so I know who’s coming.”
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <div class="mm-block">
+    <div class="mm-label">Audio</div>
+    <audio controls class="mm-audio">
+      <source src="Supplementary/case1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+</div>
+
+      
       <div class="card stage1">
         (Stage1 description for Case 2)
       </div>
@@ -288,8 +322,8 @@ hr{
       </div>
 
       <div class="card pred">
-        Ground Truth: Oppose<br><br>
-        <span class="ours">H²GF-Net: Oppose</span><br><br>
+        Ground Truth: Oppose<br>
+        <span class="ours">H²GF-Net: Oppose</span><br>
         MAG-BERT: Complain<br>
         MuLT: Criticize<br>
         MISA: Complain<br>
@@ -297,10 +331,6 @@ hr{
       </div>
     </div>
 
-
-  
- 
-
-</div>
+  </div>
 </body>
 </html>
